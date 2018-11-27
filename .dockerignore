@@ -2,6 +2,7 @@
 /backups*
 /logs*
 /crash-reports*
+minetweaker.log
 
 /.git*
 .gitignore

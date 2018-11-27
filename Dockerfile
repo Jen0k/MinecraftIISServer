@@ -24,7 +24,7 @@ RUN mv ./mods/Aroma1997Core-1.7.10-1.0.2.16.jar.disabled ./mods/Aroma1997Core-1.
 RUN mv ./mods/AromaBackup-1.7.10-0.1.0.0.jar.disabled ./mods/AromaBackup-1.7.10-0.1.0.0.jar || :
 
 RUN  sed -i -E "s/(^.+keep\=)(.+)($)/\148\3/g" ./config/aroma1997/AromaBackup.cfg || :
-RUN  sed -i -E "s/(^.+skipbackup\=)(.+)($)/\1false\3/g" ./config/aroma1997/AromaBackup.cfg || :
+RUN  sed -i -E "s/(^.+skipbackup\=)(.+)($)/\1true\3/g" ./config/aroma1997/AromaBackup.cfg || :
 
 RUN apt-get update
 RUN apt-get install -y openjdk-8-jdk

@@ -1,0 +1,18 @@
+				<!--<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:824, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.1'/> <!-- Cassiterite Ore -->
+				<!--<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:57, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.4'/> <!-- Ore Tin -->
+
+
+
+				<!--<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:35, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.1'/> <!-- Copper Ore  -->
+				<!--<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:840, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.2'/> <!-- Tetrahedrite Ore -->
+				<!--<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:945, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.2'/> <!-- Stibnite Ore -->

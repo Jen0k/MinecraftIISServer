@@ -1,0 +1,317 @@
+import mods.ic2.Compressor;
+import mods.ic2.Macerator;
+import mods.gregtech.Lathe;
+import mods.gregtech.Assembler;
+import mods.gregtech.CircuitAssembler;
+
+# Aliases
+var chamelium       = <OpenComputers:item:96>;
+var chameliumBlock  = <OpenComputers:chameliumBlock>;
+
+var CardBase = <OpenComputers:item:33>;
+
+var PlasticCircuitBoard = <gregtech:gt.metaitem.03:32007>;
+var EpoxyCircuitBoard = <gregtech:gt.metaitem.01:32711>;
+var FiberReinforcedCircuitBoard = <gregtech:gt.metaitem.01:32720>;
+var MultilayerFiberReinforcedCircuitBoard = <gregtech:gt.metaitem.01:32712>;
+
+var SMDResistor = <gregtech:gt.metaitem.03:32011>;
+var SMDCapacitor = <gregtech:gt.metaitem.03:32020>;
+var SMDTransistor = <gregtech:gt.metaitem.03:32018>;
+var SmallCoil = <gregtech:gt.metaitem.03:32014>;
+
+var FineGoldWire =  <gregtech:gt.metaitem.02:19086>;
+var FineElectrumWire = <gregtech:gt.metaitem.02:19303>;
+var FinePlatinumWire = <gregtech:gt.metaitem.02:19085>;
+
+var ILCChip =  <gregtech:gt.metaitem.03:32037>;
+var CPUChip = <gregtech:gt.metaitem.03:32045>;
+var NCPUChip = <gregtech:gt.metaitem.03:32055>;
+var QCPUChip = <gregtech:gt.metaitem.03:32057>;
+var RAMChip = <gregtech:gt.metaitem.03:32039>;
+var NRAMChip = <gregtech:gt.metaitem.03:32043>;
+
+var BrassPlate = <gregtech:gt.metaitem.01:17301>;
+var StainlessPlate = <ore:plateStainlessSteel>;
+var AluminiumPlate = <ore:plateAluminium>;
+var TitaniumPlate = <ore:plateTitanium>;
+var GalliumNugget = <gregtech:gt.metaitem.01:9037>;
+var StainlessScrew = <gregtech:gt.metaitem.01:27306>;
+
+var HullMV = <gregtech:gt.blockmachines:12>;
+var HullHV = <gregtech:gt.blockmachines:13>;
+var HullEV = <gregtech:gt.blockmachines:14>;
+var HullIV = <gregtech:gt.blockmachines:15>;
+
+var VentT1 = <IC2:reactorVentCore:1>;
+var VentT2 = <IC2:reactorVentGold:1>;
+var VentT3 = <IC2:reactorVentDiamond:1>;
+
+var Solder = <liquid:molten.solderingalloy>;
+
+# Recipe Tweaks
+
+recipes.removeShaped(chameliumBlock);
+recipes.removeShapeless(chamelium);
+Compressor.addRecipe(chameliumBlock, chamelium * 9);
+Macerator.addRecipe( chamelium * 9, chameliumBlock);
+
+//Generator Upgrade
+recipes.remove(<OpenComputers:item:15>);
+recipes.addShaped(<OpenComputers:item:15>, [
+    [<ore:screwStainlessSteel>, <OpenComputers:item:32>, <ore:screwStainlessSteel>],
+    [<OpenComputers:item:25>, <gregtech:gt.metaitem.01:32600>, <OpenComputers:item:25>],
+    [<ore:screwStainlessSteel>, <ore:craftingToolScrewdriver>, <ore:screwStainlessSteel>]]);
+
+//Electronics Assembler
+recipes.remove(<OpenComputers:assembler>);
+recipes.addShaped(<OpenComputers:assembler>, [
+[StainlessPlate, <gregtech:gt.metaitem.01:32740>, StainlessPlate],
+[<gregtech:gt.metaitem.01:32682>, <gregtech:gt.blockmachines:213>, <gregtech:gt.metaitem.01:32692>],
+[StainlessPlate, <minecraft:crafting_table>, StainlessPlate]]);
+
+//Disassembler
+recipes.remove(<OpenComputers:disassembler>);
+recipes.addShaped(<OpenComputers:disassembler>, [
+[StainlessPlate, <gregtech:gt.metaitem.01:32740>, StainlessPlate],
+[<gregtech:gt.metaitem.01:32682>, <gregtech:gt.blockmachines:453>, <gregtech:gt.metaitem.01:32692>],
+[StainlessPlate, <Railcraft:tool.crowbar>, StainlessPlate]]);
+
+//Control Unit
+recipes.remove(<OpenComputers:item:28>);
+CircuitAssembler.addRecipe(<OpenComputers:item:28>, [PlasticCircuitBoard, ILCChip, SMDResistor * 2, SMDCapacitor * 2, SmallCoil * 2, FineGoldWire * 2], Solder * 36, 50, 120);
+
+//CPU T1
+recipes.remove(<OpenComputers:item:29>);
+CircuitAssembler.addRecipe(<OpenComputers:item:29>, [PlasticCircuitBoard, CPUChip, RAMChip * 4, BrassPlate, SMDCapacitor * 4, GalliumNugget], Solder * 36, 100, 120);
+
+//CPU T2
+recipes.remove(<OpenComputers:item:42>);
+CircuitAssembler.addRecipe(<OpenComputers:item:42>, [EpoxyCircuitBoard, NCPUChip, RAMChip * 16, BrassPlate, SMDCapacitor * 4, GalliumNugget], Solder * 72, 200, 480);
+
+//CPU T3
+recipes.remove(<OpenComputers:item:43>);
+CircuitAssembler.addRecipe(<OpenComputers:item:43>, [FiberReinforcedCircuitBoard, QCPUChip, NRAMChip * 8, BrassPlate, SMDCapacitor * 4, GalliumNugget], Solder * 144, 400, 1920);
+
+//Component Bus T1
+recipes.remove(<OpenComputers:item:70>);
+CircuitAssembler.addRecipe(<OpenComputers:item:70>, [EpoxyCircuitBoard, <OpenComputers:item:28>, SMDResistor * 2, SMDCapacitor * 2, SmallCoil * 2, FineGoldWire * 4], Solder * 36, 100, 120);
+
+//Component Bus T2
+recipes.remove(<OpenComputers:item:71>);
+CircuitAssembler.addRecipe(<OpenComputers:item:71>, [FiberReinforcedCircuitBoard, <OpenComputers:item:28>, CPUChip, RAMChip * 16, SMDCapacitor * 4, FineElectrumWire * 4], Solder * 72, 200, 480);
+
+//Component Bus T3
+recipes.remove(<OpenComputers:item:72>);
+CircuitAssembler.addRecipe(<OpenComputers:item:72>, [MultilayerFiberReinforcedCircuitBoard, <OpenComputers:item:28>, NCPUChip, NRAMChip * 8, SMDCapacitor * 4, FinePlatinumWire * 4], Solder * 144, 400, 1920);
+
+//RAM T1
+recipes.remove(<OpenComputers:item:1>);
+CircuitAssembler.addRecipe(<OpenComputers:item:1>, [PlasticCircuitBoard, RAMChip * 8, SMDCapacitor * 2, SMDResistor * 2, SMDTransistor * 2, FineGoldWire * 2], Solder * 36, 100, 120);
+
+//RAM T1.5
+recipes.remove(<OpenComputers:item:50>);
+CircuitAssembler.addRecipe(<OpenComputers:item:50>, [<OpenComputers:item:1>, RAMChip * 8], Solder * 36, 100, 120);
+
+//RAM T2
+recipes.remove(<OpenComputers:item:2>);
+CircuitAssembler.addRecipe(<OpenComputers:item:2>, [EpoxyCircuitBoard, RAMChip * 16, SMDCapacitor * 2, SMDResistor * 2, SMDTransistor * 2, FineElectrumWire * 2], Solder * 72, 200, 480);
+
+//RAM T2.5
+recipes.remove(<OpenComputers:item:3>);
+CircuitAssembler.addRecipe(<OpenComputers:item:3>, [<OpenComputers:item:2>, RAMChip * 16], Solder * 72, 200, 480);
+
+//RAM T3
+recipes.remove(<OpenComputers:item:38>);
+CircuitAssembler.addRecipe(<OpenComputers:item:38>, [FiberReinforcedCircuitBoard, NRAMChip * 8, SMDCapacitor * 2, SMDResistor * 2, SMDTransistor * 2, FinePlatinumWire * 2], Solder * 144, 400, 1920);
+
+//RAM T3.5
+recipes.remove(<OpenComputers:item:39>);
+CircuitAssembler.addRecipe(<OpenComputers:item:39>, [<OpenComputers:item:38>, NRAMChip * 8], Solder * 144, 400, 1920);
+
+//Card Base
+recipes.remove(CardBase);
+CircuitAssembler.addRecipe(CardBase, [PlasticCircuitBoard, <gregtech:gt.metaitem.01:23306>, SMDTransistor * 4, SMDCapacitor * 4, SmallCoil * 2, FineGoldWire * 4], Solder * 72, 100, 120);
+
+//GPU T1
+recipes.remove(<OpenComputers:item:8>);
+CircuitAssembler.addRecipe(<OpenComputers:item:8>, [CardBase, CPUChip, RAMChip * 8, ILCChip, VentT1, GalliumNugget], Solder * 36, 100, 120);
+
+//GPU T2
+recipes.remove(<OpenComputers:item:9>);
+CircuitAssembler.addRecipe(<OpenComputers:item:9>, [CardBase, NCPUChip, RAMChip * 16, ILCChip, VentT2, GalliumNugget], Solder * 72, 200, 480);
+
+//GPU T3
+recipes.remove(<OpenComputers:item:10>);
+CircuitAssembler.addRecipe(<OpenComputers:item:10>, [CardBase, QCPUChip, NRAMChip * 8, ILCChip, VentT3, GalliumNugget], Solder * 144, 400, 1920);
+
+//APU T1
+recipes.remove(<OpenComputers:item:101>);
+CircuitAssembler.addRecipe(<OpenComputers:item:101>, [FiberReinforcedCircuitBoard, <OpenComputers:item:42>, <OpenComputers:item:70>, <OpenComputers:item:8>, ILCChip, FineElectrumWire * 8], Solder * 72, 200, 480);
+
+//APU T2
+recipes.remove(<OpenComputers:item:102>);
+CircuitAssembler.addRecipe(<OpenComputers:item:102>, [MultilayerFiberReinforcedCircuitBoard, <OpenComputers:item:43>, <OpenComputers:item:71>, <OpenComputers:item:9>,  ILCChip, FinePlatinumWire * 8], Solder * 144, 400, 1920);
+
+//Case T1
+recipes.remove(<OpenComputers:case1>);
+recipes.addShaped(<OpenComputers:case1>, [
+[StainlessScrew, PlasticCircuitBoard, StainlessScrew],
+[VentT1, HullHV, VentT1],
+[StainlessScrew, <ore:circuitAdvanced>, StainlessScrew]]);
+
+//Case T2
+recipes.remove(<OpenComputers:case2>);
+recipes.addShaped(<OpenComputers:case2>, [
+[StainlessScrew, EpoxyCircuitBoard, StainlessScrew],
+[VentT2, HullEV, VentT2],
+[StainlessScrew, <ore:circuitData>, StainlessScrew]]);
+
+//Case T3
+recipes.remove(<OpenComputers:case3>);
+recipes.addShaped(<OpenComputers:case3>, [
+[StainlessScrew, FiberReinforcedCircuitBoard, StainlessScrew],
+[VentT3, HullIV, VentT3],
+[StainlessScrew, <ore:circuitElite>, StainlessScrew]]);
+
+//OC Cable
+recipes.remove(<OpenComputers:cable>);
+Assembler.addRecipe(<OpenComputers:cable>, <gregtech:gt.metaitem.02:19035> * 8, <gregtech:gt.integrated_circuit:24> * 0, <liquid:molten.rubber> * 144, 100, 8);
+Assembler.addRecipe(<OpenComputers:cable>, <gregtech:gt.metaitem.02:19035> * 8, <gregtech:gt.integrated_circuit:24> * 0, <liquid:molten.silicone> * 72, 100, 8);
+Assembler.addRecipe(<OpenComputers:cable>, <gregtech:gt.metaitem.02:19035> * 8, <gregtech:gt.integrated_circuit:24> * 0, <liquid:molten.styrenebutadienerubber> * 108, 100, 8);
+
+//EIO Conduit
+recipes.remove(<EnderIO:itemOCConduit>);
+Assembler.addRecipe(<EnderIO:itemOCConduit>, <OpenComputers:cable>, <EnderIO:itemMaterial:1> * 4, 50, 120);
+
+//Power converter
+recipes.remove(<OpenComputers:powerConverter>);
+recipes.addShaped(<OpenComputers:powerConverter>, [
+[StainlessPlate, <gregtech:gt.metaitem.01:17890>, StainlessPlate],
+[<gregtech:gt.metaitem.01:17890>, <gregtech:gt.blockmachines:43>, <gregtech:gt.metaitem.01:17890>],
+[StainlessPlate, <gregtech:gt.metaitem.01:17890>, StainlessPlate]]);
+
+//Monitor T1
+recipes.remove(<OpenComputers:screen1>);
+Assembler.addRecipe(<OpenComputers:screen1>, [<gregtech:gt.metaitem.01:17890>, SmallCoil * 4, SMDTransistor * 2, SMDCapacitor * 2, SMDResistor * 2, <ore:circuitBasic> * 2], <liquid:molten.plastic> * 576, 200, 120);
+
+//Monitor T2
+recipes.remove(<OpenComputers:screen2>);
+Assembler.addRecipe(<OpenComputers:screen2>, [<gregtech:gt.metaitem.01:17890>, <appliedenergistics2:item.ItemMultiPart:180>, SMDTransistor * 2, SMDCapacitor * 2, SMDResistor * 2, <ore:circuitGood> * 2], <liquid:molten.plastic> * 288, 200, 120);
+
+//Monitor T3
+recipes.remove(<OpenComputers:screen3>);
+Assembler.addRecipe(<OpenComputers:screen3>, [<gregtech:gt.metaitem.01:17890>, <appliedenergistics2:item.ItemMultiPart:180>, <gregtech:gt.metaitem.01:29649>, SMDCapacitor * 2, SMDResistor * 2, <ore:circuitAdvanced> * 2], <liquid:molten.plastic> * 288, 200, 480);
+
+//Disk Platter
+recipes.remove(<OpenComputers:item:19>);
+Lathe.addRecipe(<OpenComputers:item:19>, <gregtech:gt.metaitem.01:17305>, 100, 120);
+
+//HDD T1
+recipes.remove(<OpenComputers:item:5>);
+Assembler.addRecipe(<OpenComputers:item:5>, [<OpenComputers:item:19>, <gregtech:gt.metaitem.01:32602>, <gregtech:gt.metaitem.01:26356> * 2, <ore:circuitAdvanced>, <gregtech:gt.metaitem.01:27019>, FineGoldWire * 8], <liquid:molten.plastic> * 288, 100, 120);
+
+//HDD T2
+recipes.remove(<OpenComputers:item:6>);
+Assembler.addRecipe(<OpenComputers:item:6>, [<OpenComputers:item:19> * 2, <gregtech:gt.metaitem.01:32603>, <gregtech:gt.metaitem.01:26356> * 2, <ore:circuitData>, <gregtech:gt.metaitem.01:27019>, FineElectrumWire * 8], <liquid:molten.plastic> * 288, 200, 480);
+
+//HDD T3
+recipes.remove(<OpenComputers:item:7>);
+Assembler.addRecipe(<OpenComputers:item:7>, [<OpenComputers:item:19> * 4, <gregtech:gt.metaitem.01:32604>, <gregtech:gt.metaitem.01:26356> * 2, <ore:circuitElite>, <gregtech:gt.metaitem.01:27019>, FinePlatinumWire * 8], <liquid:molten.plastic> * 288, 400, 1920);
+
+//EEPROM
+CircuitAssembler.addRecipe(<OpenComputers:eeprom>, [PlasticCircuitBoard, ILCChip, RAMChip * 2, <gregtech:gt.metaitem.01:32511>,  <gregtech:gt.metaitem.01:26516>, FineGoldWire * 4], Solder * 36, 100, 120);
+CircuitAssembler.addRecipe(<OpenComputers:eeprom>, [EpoxyCircuitBoard, ILCChip, <gregtech:gt.metaitem.03:32041>, FineElectrumWire * 4], Solder * 72, 200, 480);
+
+//Network Card
+recipes.remove(<OpenComputers:item:11>);
+CircuitAssembler.addRecipe(<OpenComputers:item:11>, [CardBase, ILCChip, RAMChip * 2, <OpenComputers:item:28>, <OpenComputers:cable>, FineGoldWire * 4], Solder * 36, 100, 120);
+
+//Redstone Card T1
+recipes.remove(<OpenComputers:item:66>);
+CircuitAssembler.addRecipe(<OpenComputers:item:66>, [CardBase, ILCChip, RAMChip * 2, <OpenComputers:item:28>, <gregtech:gt.blockmachines:2006>, FineGoldWire * 4], Solder * 36, 100, 120);
+
+//Internet Card
+recipes.remove(<OpenComputers:item:44>);
+CircuitAssembler.addRecipe(<OpenComputers:item:44>, [CardBase, ILCChip, RAMChip * 2, <OpenComputers:item:28>, <OpenComputers:item:48>, FineElectrumWire * 4], Solder * 72, 200, 480);
+
+//Redstone Card T2
+recipes.remove(<OpenComputers:item:12>);
+CircuitAssembler.addRecipe(<OpenComputers:item:12>, [CardBase, ILCChip, RAMChip * 2, <OpenComputers:item:28>, <ore:projredBundledCable>, FineElectrumWire * 4], Solder * 72, 200, 480);
+
+//Adapter
+recipes.remove(<OpenComputers:adapter>);
+recipes.addShaped(<OpenComputers:adapter>, [
+[AluminiumPlate, <OpenComputers:item:28>, AluminiumPlate],
+[<OpenComputers:cable>, HullMV, <OpenComputers:cable>],
+[AluminiumPlate, <ore:circuitGood>, AluminiumPlate]]);
+
+//Capacitor
+recipes.remove(<OpenComputers:capacitor>);
+recipes.addShaped(<OpenComputers:capacitor>, [
+[AluminiumPlate, <gregtech:gt.metaitem.01:32528>, AluminiumPlate],
+[<OpenComputers:cable>, <gregtech:gt.blockmachines:162>, <OpenComputers:cable>],
+[AluminiumPlate, <ore:circuitGood>, AluminiumPlate]]);
+
+//Disk Drive
+recipes.remove(<OpenComputers:diskDrive>);
+recipes.addShaped(<OpenComputers:diskDrive>, [
+[AluminiumPlate, <ore:circuitGood>, AluminiumPlate],
+[<gregtech:gt.metaitem.01:32641>, <gregtech:gt.blockmachines:162>],
+[AluminiumPlate, <gregtech:gt.metaitem.01:32601>, AluminiumPlate]]);
+
+//Power Distributor
+recipes.remove(<OpenComputers:powerDistributor>);
+recipes.addShaped(<OpenComputers:powerDistributor>, [
+[SmallCoil, <ore:circuitGood>, SmallCoil],
+[<OpenComputers:cable>, <gregtech:gt.blockmachines:162>, <OpenComputers:cable>],
+[SmallCoil, <ore:circuitGood>, SmallCoil]]);
+
+//Raid
+recipes.remove(<OpenComputers:raid>);
+recipes.addShaped(<OpenComputers:raid>, [
+[StainlessPlate, <OpenComputers:item:43>, StainlessPlate],
+[<OpenComputers:item:1>, <OpenComputers:diskDrive>, <OpenComputers:item:1>],
+[StainlessPlate, <ore:circuitAdvanced>, StainlessPlate]]);
+
+//Redstone IO
+recipes.remove(<OpenComputers:redstone>);
+recipes.addShaped(<OpenComputers:redstone>, [
+[StainlessPlate, <OpenComputers:item:66>, StainlessPlate],
+[<gregtech:gt.metaitem.01:17308>, HullHV, <gregtech:gt.metaitem.01:17308>],
+[StainlessPlate, <ore:circuitAdvanced>, StainlessPlate]]);
+
+//Relay
+recipes.remove(<OpenComputers:relay>);
+recipes.addShaped(<OpenComputers:relay>, [
+[AluminiumPlate, <OpenComputers:item:11>, AluminiumPlate],
+[<OpenComputers:cable>, HullMV, <OpenComputers:cable>],
+[AluminiumPlate, <ore:circuitGood>, AluminiumPlate]]);
+
+//Rack
+recipes.remove(<OpenComputers:rack>);
+recipes.addShaped(<OpenComputers:rack>, [
+[TitaniumPlate, <OpenComputers:item:13>, TitaniumPlate],
+[<OpenComputers:relay>, HullEV, <OpenComputers:powerDistributor>],
+[TitaniumPlate, <ore:circuitData>, TitaniumPlate]]);
+
+//Net Splitter
+recipes.remove(<OpenComputers:netSplitter>);
+recipes.addShaped(<OpenComputers:netSplitter>, [
+[AluminiumPlate, <minecraft:lever>, AluminiumPlate],
+[<OpenComputers:cable>, HullMV, <OpenComputers:cable>],
+[AluminiumPlate, <ore:circuitGood>, AluminiumPlate]]);
+
+//Transposer
+recipes.remove(<OpenComputers:transposer>);
+recipes.addShaped(<OpenComputers:transposer> * 4, [
+[AluminiumPlate, <gregtech:gt.metaitem.01:32631>, AluminiumPlate],
+[<OpenComputers:item:61>, HullMV, <OpenComputers:item:77>],
+[AluminiumPlate, <gregtech:gt.metaitem.01:32611>, AluminiumPlate]]);
+
+//Analyzer
+recipes.remove(<OpenComputers:item>);
+recipes.addShaped(<OpenComputers:item>, [
+[AluminiumPlate, <ore:circuitAdvanced>, AluminiumPlate],
+[<gregtech:gt.blockmachines:1426>, <gregtech:gt.metaitem.01:32740>, <gregtech:gt.blockmachines:1426>],
+[AluminiumPlate, <ore:circuitAdvanced>, AluminiumPlate]]);

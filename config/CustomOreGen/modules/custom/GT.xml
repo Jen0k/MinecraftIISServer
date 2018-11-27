@@ -1,0 +1,98 @@
+<IfModInstalled name='gregtech'>
+
+	<ConfigSection> <!-- GUI -->
+
+		<OptionChoice name='ifCassiterite' default='true' displayState='shown' displayGroup='GregTech'>
+			<Description>
+				Generate distributions of Cassiterite.
+			</Description>
+			<DisplayName>Cassiterite</DisplayName>
+			<Choice value='true' displayValue='On' description='none'/>
+			<Choice value='false' displayValue='Off'/>
+		</OptionChoice>
+		
+		<OptionChoice name='ifTetrahedrite' default='true' displayState='shown' displayGroup='GregTech'>
+			<Description>
+				Generate distributions of Tetrahedrite.
+			</Description>
+			<DisplayName>Tetrahedrite</DisplayName>
+			<Choice value='true' displayValue='On' description='none'/>
+			<Choice value='false' displayValue='Off'/>
+		</OptionChoice>
+		
+	</ConfigSection>
+	
+	<ConfigSection> <!-- Ore gen -->
+	
+		<VeinsPreset name='Mountains' drawWireframe='true'>
+			<Setting name='MotherlodeHeight' avg='160' range='60'/>
+			<Setting name='MotherlodeSize' avg='6' range='2'/>
+			<Setting name='BranchLength' avg='50' range='10'/>
+			<Setting name='MotherlodeRangeLimit' avg='100' range='10'/>
+			<Setting name='SegmentRadius' avg='2.5' range='0.5'/>
+			<Setting name='MotherlodeFrequency' avg='0.01'/>
+			<Replaces block='minecraft:stone'/>
+			<Replaces block='Railcraft:cube:6'/>
+			<Replaces block='Railcraft:cube:7'/>
+			<Replaces block='chisel:andesite'/>
+			<Replaces block='chisel:diorite'/>
+			<Replaces block='chisel:grimstone'/>
+			<Replaces block='chisel:holystone'/>
+			<Replaces block='chisel:limestone'/>
+			<Replaces block='chisel:marble'/>
+			<Replaces block='UndergroundBiomes:igneousStone'/>
+			<Replaces block='UndergroundBiomes:igneousStone:1'/>
+			<Replaces block='UndergroundBiomes:igneousStone:2'/>
+			<Replaces block='UndergroundBiomes:igneousStone:3'/>
+			<Replaces block='UndergroundBiomes:igneousStone:4'/>
+			<Replaces block='UndergroundBiomes:igneousStone:5'/>
+			<Replaces block='UndergroundBiomes:igneousStone:6'/>
+			<Replaces block='UndergroundBiomes:igneousStone:7'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:1'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:2'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:3'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:4'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:5'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:6'/>
+			<Replaces block='UndergroundBiomes:metamorphicStone:7'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:1'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:2'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:3'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:4'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:5'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:6'/>
+			<Replaces block='UndergroundBiomes:sedimentaryStone:7'/>
+			<Biome name='.*'/>
+		</VeinsPreset>
+	
+		<IfNotChoice name='ifCassiterite' value='false'> 
+			<Veins name='Cassiterite' inherits='Mountains' wireframeColor='0xFF400000'>
+				<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:16824, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.2'/> <!-- Small Cassiterite Ore -->
+				<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:16057, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.8'/> <!-- Small Tin Ore -->
+				<Setting name='OreDensity' avg='0.3'/>
+			</Veins>
+		</IfNotChoice> 	
+		
+		<IfNotChoice name='ifTetrahedrite' value='false'> 
+			<Veins name='Tetrahedrite' inherits='Mountains' wireframeColor='0xFAA00000'>
+				<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:16035, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.4'/> <!-- Small Copper Ore  -->
+				<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:16840, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.4'/> <!-- Small Tetrahedrite Ore -->
+				<OreBlock block='gregtech:gt.blockores'
+					nbt='{m:16945, n:1, id:"GT_TileEntity_Ores"}'
+					weight='0.2'/> <!-- Small Stibnite Ore -->
+				<Setting name='OreDensity' avg='0.3'/>
+			</Veins>
+		</IfNotChoice> 	
+		
+	</ConfigSection>
+</IfModInstalled>

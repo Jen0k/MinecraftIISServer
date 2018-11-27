@@ -1,0 +1,11 @@
+/IISPerfect*
+/backups*
+/logs*
+/crash-reports*
+
+/.git*
+.gitignore
+
+Dockerfile
+.dockerignore
+

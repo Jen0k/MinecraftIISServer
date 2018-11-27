@@ -1,0 +1,273 @@
+{
+    "images":
+    {
+        "title":
+        {
+            "image" : "iis:logo.png",
+            "posX" : -94,
+            "posY" : 0,
+            "width" : 189,
+            "height" : 60,
+            "alignment" : "top_center"
+        }
+    },
+    
+    "buttons":
+    {
+        "singleplayer":
+        {
+            "text" : "menu.singleplayer",
+            "posX" : -50,
+            "posY" : -48,
+            "width" : 100,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "iis:button.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+        
+        "multiplayer":
+        {
+            "text" : "menu.multiplayer",
+            "posX" : -50,
+            "posY" : -24,
+            "width" : 100,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "iis:button.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "multiplayer"
+            }
+        },
+        
+        "mods":
+        {
+            "text" : "Mods",
+            "posX" : -50,
+            "posY" : 0,
+            "width" : 100,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "iis:button.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "mods"
+            }
+        },
+            
+        "options":
+        {
+            "text" : "menu.options",
+            "posX" : -50,
+            "posY" : 24,
+            "width" : 100,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "iis:button.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+        
+        "quit":
+        {
+            "text" : "menu.quit",
+            "posX" : -50,
+            "posY" : 72,
+            "width" : 100,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "iis:button.png",
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+        
+        "refresh":
+        {
+            "text" : "",
+            "posX" : -20,
+            "posY" : 0,
+            "width" : 20,
+            "height" : 20,
+			"alignment" : "top_right",
+			"texture" : "iis:refresh.png",
+            "action" : 
+            {
+                "type" : "refresh"
+            }
+        },
+
+        "website":
+        {
+            "text" : "",
+            "texture" : "iis:www.png",
+            "alignment" : "center",
+            "posX" : -50,
+            "posY" : 48,
+            "width" : 20,
+            "height" : 20,
+            "action" :
+			{
+				"type" : "openLink",
+				"link" : "http://sapientmail.wixsite.com/minecraft"
+			}
+		},
+		
+		"VK":
+        {
+            "text" : "",
+            "texture" : "iis:vk.png",
+            "alignment" : "center",
+            "posX" : -23,
+            "posY" : 48,
+            "width" : 20,
+            "height" : 20,
+            "action" :
+			{
+				"type" : "openLink",
+				"link" : "https://vk.com/ideal_industrial"
+			}
+		},
+		
+		"Discord":
+        {
+            "text" : "",
+            "texture" : "iis:discord.png",
+            "alignment" : "center",
+            "posX" : 3,
+            "posY" : 48,
+            "width" : 20,
+            "height" : 20,
+            "action" :
+			{
+				"type" : "openLink",
+				"link" : "https://discord.gg/gpJwCnz"
+			}
+		},
+		
+		"Youtube":
+        {
+            "text" : "",
+            "texture" : "iis:youtube.png",
+            "alignment" : "center",
+            "posX" : 30,
+            "posY" : 48,
+            "width" : 20,
+            "height" : 20,
+            "action" :
+			{
+				"type" : "openLink",
+				"link" : "https://www.youtube.com/playlist?list=PLkCDxo2DPJcNhXNsp3srNzkR3PdkIr9t7"
+			}
+		}
+    },
+    
+    "texts":
+    {
+        "news":
+        {
+            "text":"web:",
+            "posX" : -290,
+            "posY" : -9,
+            "color" : -1,
+            "alignment" : "right_center"
+        },
+		
+		"current-version-tiltle":
+        {
+            "text" : "Current Version:",
+            "posX" : -115,
+            "posY" : -19,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        },
+        
+		"current-version":
+        {
+            "text" : "file:iis:version.txt",
+            "posX" : -30,
+            "posY" : -19,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        },
+        
+		"latest-version-tiltle":
+        {
+            "text":"Latest Version:",
+            "posX" : -107,
+            "posY" : -9,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        },
+		
+		"latest-version":
+        {
+            "text":"web:http://pastebin.com/raw/t7itwUmm",
+            "posX" : -30,
+            "posY" : -9,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        },
+		
+        "fml":
+        {
+            "text" : "",
+            "posX" : 2,
+            "posY" : -45,
+            "color" : -1,
+            "alignment" : "bottom_left"
+        }
+    },
+    
+    "other":
+    {
+        "splash-text":
+        {
+            "posX" : 70,
+            "posY" : 36,
+            "color" : -256,
+            "alignment" : "top_left",
+            "texts" : "file:iis:splashes.txt"
+        },
+		
+		"background":
+        {
+            "image" : "",
+            "slideshow":
+            {
+                "images" : [	"iis:scr/01.jpg",
+				"iis:scr/02.jpg",
+				"iis:scr/03.jpg",
+				"iis:scr/04.jpg",
+				"iis:scr/05.jpg",
+				"iis:scr/06.jpg",
+				"iis:scr/07.jpg",
+				"iis:scr/08.jpg",
+				"iis:scr/09.jpg",
+				"iis:scr/10.jpg",
+				"iis:scr/12.jpg",
+				"iis:scr/13.jpg",
+				"iis:scr/14.jpg",
+				"iis:scr/15.jpg",
+				"iis:scr/16.jpg",
+				"iis:scr/17.jpg",
+				"iis:scr/18.jpg",
+				"iis:scr/19.jpg"
+			   ],
+                "displayDuration" : 100,
+                "fadeDuration" : 40
+            }
+        }
+    }
+}

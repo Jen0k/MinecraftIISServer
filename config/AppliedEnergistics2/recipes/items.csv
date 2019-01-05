@@ -5101,9 +5101,6 @@ SGCraft:stargateController, Stargate Controller
 SGCraft:naquadahBlock, Naquadah Alloy Block
 SGCraft:naquadahOre, Naquadah Ore
 SGCraft:ic2PowerUnit, IC2 Stargate Power Unit
-ForgeRelocation:relocation.blockmovingrow:0, tile.relocation.blockmovingrow|0.name
-MCFrames:mcframes.motor:0, Debug Frame Motor
-MCFrames:mcframes.frame, Frame
 minecraft:record_13, Music Disc
 minecraft:record_cat, Music Disc
 minecraft:record_blocks, Music Disc

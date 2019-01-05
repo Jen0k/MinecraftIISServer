@@ -274,3 +274,5 @@ recipes.remove(prScrewdriver);
 recipes.addShaped(prScrewdriver, [[null, <ore:craftingToolFile>, <ore:stickIron>],
 		   		  [<ore:dyeBlue>, <ore:stickIron>, <ore:craftingToolHardHammer>],
 		   		  [<ore:stickWood>, <ore:dyeBlue>, null]]);
+
+recipes.addShapeless(<ProjRed|Fabrication:projectred.fabrication.icchip>, [<ProjRed|Integration:projectred.integration.gate:34>]);

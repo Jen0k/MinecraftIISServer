@@ -1,0 +1,50 @@
+import mods.gregtech.Assembler;
+// variables
+var LithiumBattery512 = <gregtech:gt.metaitem.01:32538>;
+var NetherStarLence = <gregtech:gt.metaitem.01:24506>;
+var AdvCircuit = <ore:circuitAdvanced>;
+
+var HeatSwitchDiamond = <IC2:reactorHeatSwitchDiamond:*>;
+var BlockLuminator = <IC2:blockLuminatorDark>;
+var CarbonPlate = <IC2:itemPartCarbonPlate>;
+var IC2Crystal = <IC2:itemBatCrystal:*>;
+
+var MoltenRubber = <liquid:molten.rubber>;
+var MoltenCerium = <liquid:molten.cerium>;
+
+
+var NightvisionGoggles = <IC2:itemNightvisionGoggles:27>;
+var AlloyChestPlate = <IC2:itemArmorAlloyChestplate>;
+var NanoChestPlate = <IC2:itemArmorNanoChestplate:27>;
+var NanoHelmet = <IC2:itemArmorNanoHelmet:27>;
+var NanoBoots = <IC2:itemArmorNanoBoots:27>;
+var NanoLegs = <IC2:itemArmorNanoLegs:27>;
+
+var ModularChestplateGT = <gregtech:modularelectric1_chestplate>;
+var ModularLegginssGT = <gregtech:modularelectric1_leggings>;
+var ModularHelmetGT = <gregtech:modularelectric1_helmet>;
+var ModularBootsGT = <gregtech:modularelectric1_boots>;
+
+// remove
+recipes.remove(<IC2:itemNightvisionGoggles:*>);
+recipes.remove(<IC2:itemArmorNanoHelmet:*>);
+recipes.remove(<IC2:itemArmorNanoChestplate:*>);
+recipes.remove(<IC2:itemArmorNanoLegs:*>);
+recipes.remove(<IC2:itemArmorNanoBoots:*>);
+
+//Nano armor reciepes
+Assembler.addRecipe(NightvisionGoggles,
+				[AdvCircuit*2, NetherStarLence*2, LithiumBattery512, HeatSwitchDiamond, BlockLuminator * 2, HeatSwitchDiamond],
+				MoltenRubber * 1152, 600, 480);
+Assembler.addRecipe(NanoHelmet,
+				[ModularHelmetGT, CarbonPlate * 16, IC2Crystal, NightvisionGoggles, AdvCircuit * 4],
+				MoltenCerium * 1296, 800, 480);
+Assembler.addRecipe(NanoChestPlate,
+				[ModularChestplateGT, AlloyChestPlate, CarbonPlate * 28, IC2Crystal, AdvCircuit * 8],
+				MoltenCerium * 1296, 1200, 480);
+Assembler.addRecipe(NanoLegs,
+				[ModularLegginssGT, CarbonPlate * 18, IC2Crystal, AdvCircuit * 4],
+				MoltenCerium * 1296, 800, 480);
+Assembler.addRecipe(NanoBoots,
+				[ModularBootsGT, CarbonPlate * 16, IC2Crystal, AdvCircuit * 2],
+				MoltenCerium * 1296, 600, 480);

@@ -77,4 +77,32 @@ Centrifuge.addRecipe([<gregtech:gt.metaitem.01:2837> * 4 /*impure SiO2*/, <gregt
 // Chert is a hard, fine-grained sedimentary rock composed of crystals of quartz (silica) that are very small (microcrystalline or cryptocrystalline).[1] Quartz (silica) is the mineral form of silicon dioxide (SiO2).
 Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2837> /*impure SiO2*/, <gregtech:gt.metaitem.01:816> /*dark ashes*/], <UndergroundBiomes:sedimentaryStone:7> /*UB Chert*/, [5000, 1000], 400, 2);
 
-
+// add UGB Ores to oredict
+val oreRedstone = <ore:oreRedstone>;
+oreRedstone.add(<UndergroundBiomes:igneous_oreRedstone:*>);
+oreRedstone.add(<UndergroundBiomes:sedimentary_oreRedstone:*>);
+oreRedstone.add(<UndergroundBiomes:metamorphic_oreRedstone:*>);
+val oreCoal = <ore:oreCoal>;
+oreCoal.add(<UndergroundBiomes:igneous_oreCoal:*>);
+oreCoal.add(<UndergroundBiomes:sedimentary_oreCoal:*>);
+oreCoal.add(<UndergroundBiomes:metamorphic_oreCoal:*>);
+val oreDiamond = <ore:oreDiamond>;
+oreDiamond.add(<UndergroundBiomes:igneous_oreDiamond:*>);
+oreDiamond.add(<UndergroundBiomes:sedimentary_oreDiamond:*>);
+oreDiamond.add(<UndergroundBiomes:metamorphic_oreDiamond:*>);
+val oreLapis = <ore:oreLapis>;
+oreLapis.add(<UndergroundBiomes:igneous_oreLapis:*>);
+oreLapis.add(<UndergroundBiomes:sedimentary_oreLapis:*>);
+oreLapis.add(<UndergroundBiomes:metamorphic_oreLapis:*>);
+val oreEmerald = <ore:oreEmerald>;
+oreEmerald.add(<UndergroundBiomes:igneous_oreEmerald:*>);
+oreEmerald.add(<UndergroundBiomes:sedimentary_oreEmerald:*>);
+oreEmerald.add(<UndergroundBiomes:metamorphic_oreEmerald:*>);
+val oreGold = <ore:oreGold>;
+oreGold.add(<UndergroundBiomes:igneous_oreGold:*>);
+oreGold.add(<UndergroundBiomes:sedimentary_oreGold:*>);
+oreGold.add(<UndergroundBiomes:metamorphic_oreGold:*>);
+val oreIron = <ore:oreIron>;
+oreIron.add(<UndergroundBiomes:igneous_oreIron:*>);
+oreIron.add(<UndergroundBiomes:sedimentary_oreIron:*>);
+oreIron.add(<UndergroundBiomes:metamorphic_oreIron:*>);

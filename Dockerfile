@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
+RUN apt-get update
+RUN apt-get install -y openjdk-8-jdk
+
 EXPOSE 25578
 
 RUN mkdir -p /iisserver
@@ -25,8 +28,5 @@ RUN mv ./mods/AromaBackup-1.7.10-0.1.0.0.jar.disabled ./mods/AromaBackup-1.7.10-
 
 RUN  sed -i -E "s/(^.+keep\=)(.+)($)/\148\3/g" ./config/aroma1997/AromaBackup.cfg || :
 RUN  sed -i -E "s/(^.+skipbackup\=)(.+)($)/\1true\3/g" ./config/aroma1997/AromaBackup.cfg || :
-
-RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk
 
 ENTRYPOINT java -Xmx8G -Xmn1G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -jar ./forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui

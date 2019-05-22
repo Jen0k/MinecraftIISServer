@@ -1,5 +1,6 @@
 // --- Created by DreamMasterXXL --- 
 // --- Few scripts added by Jason McRay ---
+// --- Edited by Sapient ---
 
 import mods.gregtech.Assembler;
 

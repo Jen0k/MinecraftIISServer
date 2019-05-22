@@ -1,4 +1,5 @@
 // by Stratos
+// --- Edited by Sapient ---
 
 // iridium
 vanilla.loot.removeChestLoot("strongholdCorridor", <IC2:itemOreIridium>);

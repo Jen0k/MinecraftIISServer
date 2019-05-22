@@ -1,4 +1,5 @@
 // --- Created by Jason McRay ---
+// --- Edited by Sapient ---
 
 import mods.nei.NEI;
 import mods.gregtech.FormingPress;

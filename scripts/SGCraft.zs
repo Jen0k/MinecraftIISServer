@@ -1,4 +1,5 @@
 // --- Created by Jason McRay --- 
+// --- Edited by Sapient ---
 
 # Gregs SGCraft
 import mods.gregtech.ChemicalReactor;

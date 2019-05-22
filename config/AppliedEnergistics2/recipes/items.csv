@@ -4278,6 +4278,14 @@ gregtech:gt.blockmachines:677, gt.blockmachines.basicmachine.e_oven.tier.07.name
 gregtech:gt.blockmachines:678, gt.blockmachines.basicmachine.e_oven.tier.08.name
 gregtech:gt.blockmachines:679, gt.blockmachines.basicmachine.miner.tier.01.name
 gregtech:gt.blockmachines:680, gt.blockmachines.basicmachine.miner.tier.02.name
+gregtech:gt.blockmachines:681, gt.blockmachines.basicmachine.organicreplicator.tier.01.name
+gregtech:gt.blockmachines:682, gt.blockmachines.basicmachine.organicreplicator.tier.02.name
+gregtech:gt.blockmachines:683, gt.blockmachines.basicmachine.organicreplicator.tier.03.name
+gregtech:gt.blockmachines:684, gt.blockmachines.basicmachine.organicreplicator.tier.04.name
+gregtech:gt.blockmachines:685, gt.blockmachines.basicmachine.organicreplicator.tier.05.name
+gregtech:gt.blockmachines:686, gt.blockmachines.basicmachine.organicreplicator.tier.06.name
+gregtech:gt.blockmachines:687, gt.blockmachines.basicmachine.organicreplicator.tier.07.name
+gregtech:gt.blockmachines:688, gt.blockmachines.basicmachine.organicreplicator.tier.08.name
 gregtech:gt.blockmachines:690, gt.blockmachines.batterycharger.16.tier.00.name
 gregtech:gt.blockmachines:691, gt.blockmachines.batterycharger.16.tier.01.name
 gregtech:gt.blockmachines:692, gt.blockmachines.batterycharger.16.tier.02.name
@@ -4363,6 +4371,7 @@ gregtech:gt.blockmachines:1184, gt.blockmachines.basicmachine.circuitassembler.t
 gregtech:gt.blockmachines:1185, gt.blockmachines.basicmachine.circuitassembler.tier.06.name
 gregtech:gt.blockmachines:1186, gt.blockmachines.basicmachine.circuitassembler.tier.07.name
 gregtech:gt.blockmachines:1187, gt.blockmachines.basicmachine.circuitassembler.tier.08.name
+gregtech:gt.blockmachines:1188, gt.blockmachines.multimachine.advancedprocessingarray.name
 gregtech:gt.blockmachines:1190, gt.blockmachines.basicgenerator.naquadah.tier.04.name
 gregtech:gt.blockmachines:1191, gt.blockmachines.basicgenerator.naquadah.tier.05.name
 gregtech:gt.blockmachines:1192, gt.blockmachines.basicgenerator.naquadah.tier.06.name
@@ -4842,6 +4851,8 @@ gregtech:gt.blockmachines:4468, gt.blockmachines.gt_frame_hssg.name
 gregtech:gt.blockmachines:4469, gt.blockmachines.gt_frame_hsse.name
 gregtech:gt.blockmachines:4470, gt.blockmachines.gt_frame_hsss.name
 gregtech:gt.blockmachines:4474, gt.blockmachines.gt_frame_pulsatingiron.name
+gregtech:gt.blockmachines:4475, gt.blockmachines.gt_frame_redstonealloy.name
+gregtech:gt.blockmachines:4476, gt.blockmachines.gt_frame_soularium.name
 gregtech:gt.blockmachines:4566, gt.blockmachines.gt_frame_epoxid.name
 gregtech:gt.blockmachines:4567, gt.blockmachines.gt_frame_silicone.name
 gregtech:gt.blockmachines:4568, gt.blockmachines.gt_frame_polycaprolactam.name
@@ -5037,6 +5048,12 @@ gregtech:gt.blockmachines:9326, gt.blockmachines.automation.itemdistributor.tier
 gregtech:gt.blockmachines:9327, gt.blockmachines.automation.itemdistributor.tier.07.name
 gregtech:gt.blockmachines:9328, gt.blockmachines.automation.itemdistributor.tier.08.name
 gregtech:gt.blockmachines:9329, gt.blockmachines.automation.itemdistributor.tier.09.name
+gregtech:gt.blockmachines:12183, gt.blockmachines.basicmachine.d_transformer.tier.04.name
+gregtech:gt.blockmachines:12184, gt.blockmachines.basicmachine.d_transformer.tier.05.name
+gregtech:gt.blockmachines:12185, gt.blockmachines.basicmachine.d_transformer.tier.06.name
+gregtech:gt.blockmachines:12186, gt.blockmachines.basicmachine.d_transformer.tier.07.name
+gregtech:gt.blockmachines:12187, gt.blockmachines.basicmachine.d_transformer.tier.08.name
+gregtech:gt.blockmachines:12188, gt.blockmachines.basicmachine.d_transformer.tier.09.name
 gregtech:gt.blockgranites:0, gt.blockgranites.0.name
 gregtech:gt.blockgranites:1, gt.blockgranites.1.name
 gregtech:gt.blockgranites:2, gt.blockgranites.2.name
@@ -8020,6 +8037,8 @@ gregtech:gt.metaitem.01:2374, gt.metaitem.01.2374.name
 gregtech:gt.metaitem.01:2375, gt.metaitem.01.2375.name
 gregtech:gt.metaitem.01:2377, gt.metaitem.01.2377.name
 gregtech:gt.metaitem.01:2378, gt.metaitem.01.2378.name
+gregtech:gt.metaitem.01:2379, gt.metaitem.01.2379.name
+gregtech:gt.metaitem.01:2380, gt.metaitem.01.2380.name
 gregtech:gt.metaitem.01:2470, gt.metaitem.01.2470.name
 gregtech:gt.metaitem.01:2471, gt.metaitem.01.2471.name
 gregtech:gt.metaitem.01:2472, gt.metaitem.01.2472.name
@@ -8328,6 +8347,8 @@ gregtech:gt.metaitem.01:9372, gt.metaitem.01.9372.name
 gregtech:gt.metaitem.01:9373, gt.metaitem.01.9373.name
 gregtech:gt.metaitem.01:9374, gt.metaitem.01.9374.name
 gregtech:gt.metaitem.01:9378, gt.metaitem.01.9378.name
+gregtech:gt.metaitem.01:9379, gt.metaitem.01.9379.name
+gregtech:gt.metaitem.01:9380, gt.metaitem.01.9380.name
 gregtech:gt.metaitem.01:9470, gt.metaitem.01.9470.name
 gregtech:gt.metaitem.01:9471, gt.metaitem.01.9471.name
 gregtech:gt.metaitem.01:9472, gt.metaitem.01.9472.name
@@ -8449,6 +8470,8 @@ gregtech:gt.metaitem.01:11372, gt.metaitem.01.11372.name
 gregtech:gt.metaitem.01:11373, gt.metaitem.01.11373.name
 gregtech:gt.metaitem.01:11374, gt.metaitem.01.11374.name
 gregtech:gt.metaitem.01:11378, gt.metaitem.01.11378.name
+gregtech:gt.metaitem.01:11379, gt.metaitem.01.11379.name
+gregtech:gt.metaitem.01:11380, gt.metaitem.01.11380.name
 gregtech:gt.metaitem.01:11470, gt.metaitem.01.11470.name
 gregtech:gt.metaitem.01:11471, gt.metaitem.01.11471.name
 gregtech:gt.metaitem.01:11472, gt.metaitem.01.11472.name
@@ -8484,6 +8507,7 @@ gregtech:gt.metaitem.01:17054, gt.metaitem.01.17054.name
 gregtech:gt.metaitem.01:17057, gt.metaitem.01.17057.name
 gregtech:gt.metaitem.01:17067, gt.metaitem.01.17067.name
 gregtech:gt.metaitem.01:17070, gt.metaitem.01.17070.name
+gregtech:gt.metaitem.01:17080, gt.metaitem.01.17080.name
 gregtech:gt.metaitem.01:17081, gt.metaitem.01.17081.name
 gregtech:gt.metaitem.01:17083, gt.metaitem.01.17083.name
 gregtech:gt.metaitem.01:17084, gt.metaitem.01.17084.name
@@ -8546,6 +8570,8 @@ gregtech:gt.metaitem.01:17358, gt.metaitem.01.17358.name
 gregtech:gt.metaitem.01:17360, gt.metaitem.01.17360.name
 gregtech:gt.metaitem.01:17363, gt.metaitem.01.17363.name
 gregtech:gt.metaitem.01:17364, gt.metaitem.01.17364.name
+gregtech:gt.metaitem.01:17366, gt.metaitem.01.17366.name
+gregtech:gt.metaitem.01:17367, gt.metaitem.01.17367.name
 gregtech:gt.metaitem.01:17368, gt.metaitem.01.17368.name
 gregtech:gt.metaitem.01:17369, gt.metaitem.01.17369.name
 gregtech:gt.metaitem.01:17370, gt.metaitem.01.17370.name
@@ -8553,6 +8579,8 @@ gregtech:gt.metaitem.01:17371, gt.metaitem.01.17371.name
 gregtech:gt.metaitem.01:17372, gt.metaitem.01.17372.name
 gregtech:gt.metaitem.01:17373, gt.metaitem.01.17373.name
 gregtech:gt.metaitem.01:17374, gt.metaitem.01.17374.name
+gregtech:gt.metaitem.01:17379, gt.metaitem.01.17379.name
+gregtech:gt.metaitem.01:17380, gt.metaitem.01.17380.name
 gregtech:gt.metaitem.01:17470, gt.metaitem.01.17470.name
 gregtech:gt.metaitem.01:17471, gt.metaitem.01.17471.name
 gregtech:gt.metaitem.01:17472, gt.metaitem.01.17472.name
@@ -8733,6 +8761,7 @@ gregtech:gt.metaitem.01:23304, gt.metaitem.01.23304.name
 gregtech:gt.metaitem.01:23305, gt.metaitem.01.23305.name
 gregtech:gt.metaitem.01:23306, gt.metaitem.01.23306.name
 gregtech:gt.metaitem.01:23307, gt.metaitem.01.23307.name
+gregtech:gt.metaitem.01:23308, gt.metaitem.01.23308.name
 gregtech:gt.metaitem.01:23310, gt.metaitem.01.23310.name
 gregtech:gt.metaitem.01:23311, gt.metaitem.01.23311.name
 gregtech:gt.metaitem.01:23312, gt.metaitem.01.23312.name
@@ -9085,6 +9114,7 @@ gregtech:gt.metaitem.01:29035, gt.metaitem.01.29035.name
 gregtech:gt.metaitem.01:29036, gt.metaitem.01.29036.name
 gregtech:gt.metaitem.01:29054, gt.metaitem.01.29054.name
 gregtech:gt.metaitem.01:29070, gt.metaitem.01.29070.name
+gregtech:gt.metaitem.01:29080, gt.metaitem.01.29080.name
 gregtech:gt.metaitem.01:29081, gt.metaitem.01.29081.name
 gregtech:gt.metaitem.01:29083, gt.metaitem.01.29083.name
 gregtech:gt.metaitem.01:29085, gt.metaitem.01.29085.name
@@ -9773,8 +9803,10 @@ gregtech:gt.metaitem.02:22874, gt.metaitem.02.22874.name
 gregtech:gt.metaitem.02:22880, gt.metaitem.02.22880.name
 gregtech:gt.metaitem.02:22884, gt.metaitem.02.22884.name
 gregtech:gt.metaitem.02:22889, gt.metaitem.02.22889.name
+gregtech:gt.metaitem.02:23308, gt.metaitem.02.23308.name
 gregtech:gt.metaitem.02:24019, gt.metaitem.02.24019.name
 gregtech:gt.metaitem.02:24028, gt.metaitem.02.24028.name
+gregtech:gt.metaitem.02:24048, gt.metaitem.02.24048.name
 gregtech:gt.metaitem.02:24355, gt.metaitem.02.24355.name
 gregtech:gt.metaitem.02:25008, gt.metaitem.02.25008.name
 gregtech:gt.metaitem.02:25010, gt.metaitem.02.25010.name
@@ -10349,6 +10381,7 @@ gregtech:gt.metatool.01:172, gt.metatool.01.172.name
 gregtech:gt.metatool.01:174, gt.metatool.01.174.name
 gregtech:gt.metatool.01:176, gt.metatool.01.176.name
 gregtech:gt.GregTech_FluidDisplay, gt.GregTech_FluidDisplay.name
+gregtech:gt.Volumetric_Flask, gt.Volumetric_Flask.name
 gregtech:gt.sensorcard, gt.sensorcard.name
 gregtech:gt.neutronreflector, gt.neutronreflector.name
 gregtech:gt.60k_Helium_Coolantcell, gt.60k_Helium_Coolantcell.name

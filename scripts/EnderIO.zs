@@ -25,6 +25,10 @@ var itemDustEnderPearl = <gregtech:gt.metaitem.01:2532>;
 var itemDustPlatinum = <gregtech:gt.metaitem.01:2085>;
 var itemDustSilver = <gregtech:gt.metaitem.01:2054>;
 var itemRodDarkSteel = <gregtech:gt.metaitem.01:23364>;
+var itemDustGlass = <gregtech:gt.metaitem.01:2890>;
+var itemDustCertusQuartz = <gregtech:gt.metaitem.01:2516>;
+var itemDustNetherQuartz = <gregtech:gt.metaitem.01:2522>;
+var itemDustQuartzite = <gregtech:gt.metaitem.01:2523>;
 var robotarmMV = <gregtech:gt.metaitem.01:32651>;
 var machineChassis = <EnderIO:itemMachinePart>;
 var moldBall = <gregtech:gt.metaitem.01:32307>;
@@ -210,7 +214,10 @@ Assembler.addRecipe(<EnderIO:itemBasicCapacitor:1>, <EnderIO:itemBasicCapacitor>
 recipes.remove(<EnderIO:itemBasicCapacitor:2>); // capacitor Octadic
 Assembler.addRecipe(<EnderIO:itemBasicCapacitor:2>, <EnderIO:itemBasicCapacitor:1> * 2, <EnderIO:itemMaterial:6>, <liquid:molten.energeticalloy> * 288, 500, 480);
 
-AlloySmelter.addRecipe(fusedQuartz, <minecraft:glass>, <ore:dustQuartzite> * 4, 100, 16);
+// Fused Quartz
+AlloySmelter.addRecipe(fusedQuartz, itemDustGlass, itemDustCertusQuartz * 4, 100, 16);
+AlloySmelter.addRecipe(fusedQuartz, itemDustGlass, itemDustNetherQuartz * 4, 100, 16);
+AlloySmelter.addRecipe(fusedQuartz, itemDustGlass, itemDustQuartzite * 8, 100, 16);
 
 recipes.remove(crystalVibrant);
 Autoclave.addRecipe(crystalVibrant, itemDustEmerald, moltenVibrantAlloy * 144, 8500, 1000, 24);

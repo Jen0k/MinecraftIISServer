@@ -1,4 +1,6 @@
 // --- Created by Jason McRay --- 
+// --- Edited by Sapient ---
+
 //Imports
 
 import mods.gregtech.ArcFurnace;

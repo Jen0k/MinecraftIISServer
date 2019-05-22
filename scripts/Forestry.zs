@@ -1,5 +1,6 @@
 // --- Created by Jason McRay ---
 // --- Few scripts created by DreamMasterXXL ---
+// --- Edited by Sapient ---
 
 import mods.gregtech.Assembler;
 import mods.gregtech.Mixer;
@@ -8,6 +9,7 @@ import mods.forestry.Carpenter;
 import mods.forestry.ThermionicFabricator;
 import mods.nei.NEI;
 import minetweaker.item.IItemStack;
+import mods.gregtech.FluidExtractor;
 
 # Aliases
 var analyzer = <Forestry:core>;
@@ -575,3 +577,6 @@ var WoodPulp = <gregtech:gt.metaitem.01:2809>;
 recipes.remove(<Forestry:fertilizerCompound>);
 recipes.addShapeless(<Forestry:fertilizerCompound>, [<IC2:itemFertilizer>]);
 recipes.addShapeless(<IC2:itemFertilizer>, [<Forestry:fertilizerCompound>]);
+
+// Lava
+FluidExtractor.addRecipe(null, <Forestry:phosphor>, <liquid:lava> * 800, 10000, 128, 4);

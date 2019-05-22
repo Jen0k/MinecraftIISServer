@@ -660,7 +660,7 @@ var radioativeMaterialsAsOre = [
 	<ore:nuggetNaquadahEnriched>, <ore:plateDoubleNaquadahEnriched>, <ore:blockNaquadahEnriched>,
 	<ore:oreRedgraniteNaquadahEnriched>, <ore:oreBlackgraniteNaquadahEnriched>, <ore:oreNaquadahEnriched>, 
 	<ore:oreBasaltNaquadahEnriched>, <ore:oreMarbleNaquadahEnriched>, <ore:oreEndstoneNaquadahEnriched>, 
-	<ore:oreNetherrackNaquadahEnriched>,
+	<ore:oreNetherrackNaquadahEnriched>, <ore:dustPureUranium>, <ore:nuggetUranium235>
 ] as minetweaker.oredict.IOreDictEntry[];
 
 for i, item in radioativeMaterialsAsOre{
@@ -761,22 +761,22 @@ var GTDyeMagenta       = <gregtech:gt.metaitem.02:32427>;
 var GTDyeOrange        = <gregtech:gt.metaitem.02:32428>;
 var GTDyeWhite         = <gregtech:gt.metaitem.02:32429>;
 
-recipes.addShapeless(GTDyeBlack,     [<ore:dyeBlack>         ]);
-recipes.addShapeless(GTDyeRed,       [<ore:dyeRed>           ]);
-recipes.addShapeless(GTDyeGreen,     [<ore:dyeGreen>         ]);
-recipes.addShapeless(GTDyeBrown,     [<ore:dyeBrown>         ]);
-recipes.addShapeless(GTDyeBlue,      [<ore:dyeBlue>          ]);
-recipes.addShapeless(GTDyePurple,    [<ore:dyePurple>        ]);
-recipes.addShapeless(GTDyeCyan,      [<ore:dyeCyan>          ]);
-recipes.addShapeless(GTDyeLGray,     [<ore:dyeLightGray>     ]);
-recipes.addShapeless(GTDyeGray,      [<ore:dyeGray>          ]);
-recipes.addShapeless(GTDyePink,      [<ore:dyePink>          ]);
-recipes.addShapeless(GTDyeLime,      [<ore:dyeLime>          ]);
-recipes.addShapeless(GTDyeYellow,    [<ore:dyeYellow>        ]);
-recipes.addShapeless(GTDyeLBlue,     [<ore:dyeLightBlue>     ]);
-recipes.addShapeless(GTDyeMagenta,   [<ore:dyeMagenta>       ]);
-recipes.addShapeless(GTDyeOrange,    [<ore:dyeOrange>        ]);
-recipes.addShapeless(GTDyeWhite,     [<ore:dyeWhite>         ]);
+recipes.addShapeless(GTDyeBlack   * 2,	[<ore:dyeBlack>,	<ore:dyeBlack>    ]);
+recipes.addShapeless(GTDyeRed 	  * 2,	[<ore:dyeRed>,		<ore:dyeRed>      ]);
+recipes.addShapeless(GTDyeGreen   * 2,	[<ore:dyeGreen>,	<ore:dyeGreen>    ]);
+recipes.addShapeless(GTDyeBrown   * 2,	[<ore:dyeBrown>,	<ore:dyeBrown>    ]);
+recipes.addShapeless(GTDyeBlue 	  * 2,	[<ore:dyeBlue>,		<ore:dyeBlue>     ]);
+recipes.addShapeless(GTDyePurple  * 2,	[<ore:dyePurple>,	<ore:dyePurple>   ]);
+recipes.addShapeless(GTDyeCyan 	  * 2,	[<ore:dyeCyan>,		<ore:dyeCyan>     ]);
+recipes.addShapeless(GTDyeLGray   * 2,	[<ore:dyeLightGray>,	<ore:dyeLightGray>]);
+recipes.addShapeless(GTDyeGray 	  * 2,	[<ore:dyeGray>,		<ore:dyeGray>     ]);
+recipes.addShapeless(GTDyePink 	  * 2,	[<ore:dyePink>,		<ore:dyePink>     ]);
+recipes.addShapeless(GTDyeLime 	  * 2,	[<ore:dyeLime>,		<ore:dyeLime>     ]);
+recipes.addShapeless(GTDyeYellow  * 2,	[<ore:dyeYellow>,	<ore:dyeYellow>   ]);
+recipes.addShapeless(GTDyeLBlue   * 2,	[<ore:dyeLightBlue>,	<ore:dyeLightBlue>]);
+recipes.addShapeless(GTDyeMagenta * 2,	[<ore:dyeMagenta>,	<ore:dyeMagenta>  ]);
+recipes.addShapeless(GTDyeOrange  * 2,	[<ore:dyeOrange>,	<ore:dyeOrange>   ]);
+recipes.addShapeless(GTDyeWhite   * 2,	[<ore:dyeWhite>,	<ore:dyeWhite>    ]);
 
 //Hide charged ES
 /*
@@ -860,3 +860,10 @@ var fusionmk2 = <gregtech:gt.blockcasings4:8>;
 var plateAmericium = <ore:plateAmericium>;
 
 Assembler.addRecipe(fusionmk2, [fusionmk, plateAmericium * 6], null, 50, 16);
+
+// Tantal SMD Capasitors
+#<gregtech:gt.metaitem.01:17080>
+#<gregtech:gt.metaitem.01:29080>
+
+Assembler.addRecipe(<gregtech:gt.metaitem.03:32020> * 32, <gregtech:gt.metaitem.01:29649> * 4, <gregtech:gt.metaitem.01:29080>, <liquid:molten.plastic> * 36, 50, 120);
+Assembler.addRecipe(<gregtech:gt.metaitem.03:32020> * 32, <gregtech:gt.metaitem.01:29471> * 4, <gregtech:gt.metaitem.01:29080>, <liquid:molten.plastic> * 36, 60, 120);

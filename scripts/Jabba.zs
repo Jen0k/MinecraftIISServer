@@ -1,4 +1,5 @@
 // --- Created by Jason McRay --- 
+// --- Edited by Sapient ---
 
 # Aliases
 var chestEnder = <minecraft:ender_chest>;
